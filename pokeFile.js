@@ -7,11 +7,15 @@ let pokeArray = [
     {name: 'squirtle', image:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'},
   ];
 
-   let counter = document.getElementId("button").addEventListener("click", pokeCounting);
+let index = 0; 
+document.getElementById('myButton').addEventListener('click', pokeCounting());
 
-  function pokeCounting (
-    for ( let i = 0; i < index; i++) {
-        document.getElementById("pokeNames").pokeFile.js = pokeArray[i].image;
-        document.getElementById("pokePics").pokeFile.js = pokeArray[i].name;
-    }
-  )
+function pokeCounting () {
+    let nameElement = document.getElementById('pokeNames');
+    nameElement.innerHTML = pokeArray[index].name;
+    let picElement = document.getElementById('pokePics');
+    picElement.src = pokeArray[index].image;
+    let numElement = document.getElementById('iNum');
+    numElement.innerHTML = index;
+    index += 1;
+}
