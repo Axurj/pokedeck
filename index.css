@@ -1,0 +1,18 @@
+
+p {
+    text-align: center;
+    font-size: 25;
+    color: lightskyblue;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+button {
+    display: block;
+    margin: 50 auto;
+}
+
+/* Use hashtags to specify IDs */
+#pokePics {
+    display: block;
+    margin: 0 auto;
+}
