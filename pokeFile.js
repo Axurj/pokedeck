@@ -8,14 +8,20 @@ let pokeArray = [
   ];
 
 let index = 0; 
-document.getElementById('myButton').addEventListener('click', pokeCounting());
+document.getElementById('myButton').addEventListener('click', pokeCounting);
 
 function pokeCounting () {
+    // Gets the name of a Pokemon based on it's position in the array.
     let nameElement = document.getElementById('pokeNames');
     nameElement.innerHTML = pokeArray[index].name;
+    // Gets a picture of a Pokemon based on it's position in the array.
     let picElement = document.getElementById('pokePics');
     picElement.src = pokeArray[index].image;
-    let numElement = document.getElementById('iNum');
-    numElement.innerHTML = index;
+    // Below is used to test what index number we are at
+    // let numElement = document.getElementById('iNum');
+    // numElement.innerHTML = index;
     index += 1;
+    if (index == pokeArray.length) {
+        index = 0;
+    }
 }
